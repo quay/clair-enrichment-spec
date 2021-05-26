@@ -216,7 +216,7 @@ A new interface will be created in libvuln's driver package for obtaining Enrich
 // This interface must be scoped down to only retrieve EnrichmentRecord(s)
 // associated with a single MIME type.
 type EnrichmentGetter interface {
-  GetEnrichment(tags []string) ([]EnrichmentRecord, error)
+	GetEnrichment(context.Context, []string) ([]EnrichmentRecord, error)
 }
 ```
 
