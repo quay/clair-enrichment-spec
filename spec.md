@@ -235,7 +235,7 @@ type EnrichmentUpdater interface {
 	// UpdateEnrichments creates a new EnrichmentUpdateOperation, inserts the provided
 	// EnrichmentRecord(s), and ensures enrichments from previous updates are not
 	// queries by clients.
-	UpdateEnrichments(ctx context.Context, mime string, fingerprint driver.Fingerprint, enrichments []claircore.EnrichmentRecord)
+	UpdateEnrichments(ctx context.Context, mime string, fingerprint driver.Fingerprint, enrichments []driver.EnrichmentRecord) (uuid.UUID, error)
 }
 ```
 
