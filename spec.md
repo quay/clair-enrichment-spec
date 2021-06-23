@@ -273,8 +273,8 @@ type VulnerabilityReport struct {
 	Vulnerabilities map[string]*Vulnerability `json:"vulnerabilities"`
 	// a lookup table associating package ids with 1 or more vulnerability ids. keyed by package id
 	PackageVulnerabilities map[string][]string `json:"package_vulnerabilities"`
-    // a map of enrichments keyed by a well defined MIME type.
-    Enrichments map[string][]json.RawMessage
+	// a map of enrichments keyed by a well defined MIME type.
+	Enrichments map[string][]json.RawMessage `json:"enrichments"`
 }
 ```
 
